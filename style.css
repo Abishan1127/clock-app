@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2d3748;
+}
+
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.analog-clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 10px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    box-shadow: 
+        10px 10px 30px rgba(0, 0, 0, 0.5), 
+        -10px -10px 30px rgba(255, 255, 255, 0.05);
+    background-color: #2d3748;
+}
+
+.dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.hand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: translate(-50%, -100%) rotate(90deg);
+    background-color: white;
+    border-radius: 6px;
+}
+
+.hour-hand {
+    width: 5px;
+    height: 60px;
+    background-color: yellow;
+}
+
+.minute-hand {
+    width: 4px;
+    height: 80px;
+    background-color: green;
+}
+
+.second-hand {
+    width: 2px;
+    height: 90px;
+    background-color: red;
+}
+
+.digital-clock {
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #edf2f7;
+    background-color: #2d3748;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 
+        5px 5px 20px rgba(0, 0, 0, 0.5), 
+        -5px -5px 20px rgba(255, 255, 255, 0.05);
+}
+
+#hours, #minutes, #seconds {
+    color: #48bb78;
+}
+
+#ampm {
+    color: #ecc94b;
+}
+
+
+.clock-number {
+    position: absolute;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.number12 { top: 10px; left: 50%; transform: translateX(-50%); }
+
+.number3  { top: 50%; right: 10px; transform: translateY(-50%); }
+
+.number6  { bottom: 10px; left: 50%; transform: translateX(-50%); }
+
+.number9  { top: 50%; left: 10px; transform: translateY(-50%); }
